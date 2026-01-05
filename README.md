@@ -62,28 +62,28 @@ For more information on using the Angular CLI, including detailed command refere
 ## Estructura de carpetas
 src/app
 ├── core
-│   ├── models
-│   │   └── tarea.ts
-│   └── services
-│       └── tarea.service.ts
+│...├── models
+│...│...└── tarea.ts
+│...└── services
+│.......└── tarea.service.ts
 │
 ├── features
-│   └── tareas
-│       ├── pages
-│       │   └── listar-tareas
-│       │       ├── listar-tareas.component.ts
-│       │       └── listar-tareas.component.html
-│       │
-│       └── components
-│           └── tarea-form
-│               ├── tarea-form.component.ts
-│               └── tarea-form.component.html
+│...└── tareas
+│.......├── pages
+│.......│...└── listar-tareas
+│.......│.......├── listar-tareas.component.ts
+│.......│.......└── listar-tareas.component.html
+│.......│
+│.......└── components
+│...........└── tarea-form
+│...............├── tarea-form.component.ts
+│...............└── tarea-form.component.html
 │
 ├── shared
-│   └── components
-│       └── navbar
-│           ├── navbar.component.ts
-│           └── navbar.component.html
+│...└── components
+│.......└── navbar
+│...........├── navbar.component.ts
+│...........└── navbar.component.html
 │
 ├── app.component.ts
 ├── app.component.html
