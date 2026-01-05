@@ -57,3 +57,34 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Estructura de carpetas
+src/app
+├── core
+│   ├── models
+│   │   └── tarea.ts
+│   └── services
+│       └── tarea.service.ts
+│
+├── features
+│   └── tareas
+│       ├── pages
+│       │   └── listar-tareas
+│       │       ├── listar-tareas.component.ts
+│       │       └── listar-tareas.component.html
+│       │
+│       └── components
+│           └── tarea-form
+│               ├── tarea-form.component.ts
+│               └── tarea-form.component.html
+│
+├── shared
+│   └── components
+│       └── navbar
+│           ├── navbar.component.ts
+│           └── navbar.component.html
+│
+├── app.component.ts
+├── app.component.html
+└── app-routing.module.ts
