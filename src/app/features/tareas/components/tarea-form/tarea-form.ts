@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './tarea-form.html',
   styleUrl: './tarea-form.css',
 })
-export class TareaForm {
+export class TareaFormComponent {
 
 }
