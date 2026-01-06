@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Tarea } from '../models/tarea';
 
 
 @Injectable({
   providedIn: 'root',
 })
-export class Tarea {
+export class TareaService {
 
   private apiUrl = 'http://localhost:8080/api/tareas';
 

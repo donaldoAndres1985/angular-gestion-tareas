@@ -1,1 +1,38 @@
-<p>listar-tareas works!</p>
+<div class="container mt-3">
+
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Completado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let tarea of tareas">
+        <td>{{ tarea.id }}</td>
+        <td>{{ tarea.titulo }}</td>
+        <td>{{ tarea.descripcion }}</td>
+        <td>
+          <span
+            class="badge"
+            [ngClass]="tarea.completada ? 'badge-success' : 'badge-secondary'">
+            {{ tarea.completada ? 'Sí' : 'No' }}
+          </span>
+        </td>
+        <td>
+          <button
+            class="btn btn-danger btn-sm"
+            (click)="eliminarTarea(tarea.id)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
