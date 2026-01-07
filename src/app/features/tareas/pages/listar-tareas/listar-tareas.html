@@ -17,22 +17,28 @@
         <td>{{ tarea.titulo }}</td>
         <td>{{ tarea.descripcion }}</td>
         <td>
-          <span
-            class="badge"
-            [ngClass]="tarea.completada ? 'badge-success' : 'badge-secondary'">
-            {{ tarea.completada ? 'Sí' : 'No' }}
+          <span class="badge" [ngClass]="tarea.completado ? 'badge-success' : 'badge-secondary'">
+            {{ tarea.completado ? 'Sí' : 'No' }}
           </span>
         </td>
         <td>
-          <button
-            class="btn btn-danger btn-sm"
-            (click)="eliminarTarea(tarea.id)">
+          <button class="btn btn-warning btn-sm mr-2" [routerLink]="['/tareas/editar', tarea.id]">
+            Editar
+          </button>
+          &nbsp;
+          <button class="btn btn-danger btn-sm" (click)="eliminarTarea(tarea.id)">
             Eliminar
           </button>
+
         </td>
       </tr>
     </tbody>
 
   </table>
+<div class="mt3">
+  <a routerLink="/tareas/nueva" class="btn btn-succes">
+    Agregar Tarea
+  </a>
+</div>
 
 </div>

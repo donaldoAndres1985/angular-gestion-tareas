@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Tarea } from '../../../../core/models/tarea';
 import { TareaService } from '../../../../core/services/tarea';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-listar-tareas',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './listar-tareas.html',
   styleUrl: './listar-tareas.css',
 })
