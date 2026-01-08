@@ -1,6 +1,6 @@
-export interface Tarea {
+export class Tarea {
   id?: number;
-  titulo: string;
-  descripcion: string;
-  completado: boolean;
+  titulo: string = '';
+  descripcion?: string = '';
+  completado: boolean = false;
 }

@@ -1,1 +1,32 @@
-<p>tarea-form works!</p>
+<div class="container mt-3">
+  <h2> {{tarea.id ? 'Editar' :'Nueva' }} Tarea</h2>
+  <form (ngSubmit)="onSaveTarea()">
+
+    <div class="form-group">
+      <label>Título</label>
+      <input #tituloInput type="text" class="form-control" [(ngModel)]="tarea.titulo" name="titulo" required />
+    </div>
+
+    <div class="form-group mt-2">
+      <label>Descripción</label>
+      <textarea class="form-control" [(ngModel)]="tarea.descripcion" name="descripcion">
+      </textarea>
+    </div>
+
+    <div class="form-check mt-2">
+      <input type="checkbox" class="form-check-input" [(ngModel)]="tarea.completado" name="completada"
+        id="completada" />
+      <label class="form-check-label" for="completada">
+        Completada
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">
+      Guardar
+    </button>
+
+    <a routerLink="/tareas" class="btn btn-secondary mt-3 ml-2">
+      Cancelar
+    </a>
+  </form>
+</div>
